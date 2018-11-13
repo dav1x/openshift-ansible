@@ -13,3 +13,8 @@ working-dir = /{{ openshift_cloudprovider_vsphere_datacenter }}/vm/
 {% endif %}
 [Disk]
 scsicontrollertype = pvscsi
+{% if openshift_cloudprovider_vsphere_network is defined %}
+[Network]
+public-network = {{ openshift_cloudprovider_vsphere_network }}
+{% else %}
+{% endif %}
