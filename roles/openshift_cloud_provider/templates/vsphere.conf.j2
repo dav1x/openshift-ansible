@@ -17,4 +17,5 @@ scsicontrollertype = pvscsi
 [Network]
 public-network = {{ openshift_cloudprovider_vsphere_network }}
 {% else %}
+public-network = "VM Network" 
 {% endif %}
